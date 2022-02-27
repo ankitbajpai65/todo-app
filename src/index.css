@@ -1,13 +1,115 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.mainDiv{
+   min-height: 100vh;
+   max-height:auto;
+}
+.innerDiv{
+   /* border:2px solid red; */
+   width:25rem;
+}
+.todoImg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height:8rem;
+  width:8rem;
+  margin-bottom:1.5rem;
+  border-radius: 50%;
+}
+.addBtn{
+  border-radius:50%;
+}
+.inputBox{
+  position:relative;
+}
+.itemDiv{
+  width:23.9rem;
+  background-color: #EFDEF5;
+  display:flex;
+  margin-bottom: 1rem;
+}
+.itemDiv:hover{
+  background-color:white;
+  border:3px solid #AA206D;
+}
+.items{
+  /* border:2px solid purple; */
+  color:#AA206D;
+  padding:0rem 0.6rem;
+  min-width:17rem;
+  max-width: max-content;
+  text-align: justify;
+}
+.addIcon {
+  position: absolute;
+  top: 6px;
+  right: 22px;
+  bottom: 0;
+}
+.addIcon:hover {
+   background-color: rgb(48, 216, 71);
+   color:white;
+   border-radius: 50%;
+   cursor:pointer;
+}
+.iconsDiv{
+  /* border: 2px solid blue; */
+  width:7rem;
+  min-height:3rem; 
+  max-height:max-content; 
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.emptyBox{
+  color:rgb(30, 170, 30);
+  cursor:pointer;
+}
+.firstChange{
+  display: none;
+}
+.sBox{
+  display: none;
+}
+.fillBox{
+  color:rgb(30, 170, 30);
+  cursor:pointer;
+}
+.editIcon{
+  color:#AA206D;
+}
+.editIcon:hover{
+  cursor:pointer;
+}
+#editIconInputBox{
+  position: absolute;
+  top: 11px;
+  right: 25px;
+  bottom: 0;
+  color:white;
+}
+.deleteIcon {
+    color:red;
+}
+.deleteIcon:hover {
+  cursor:pointer;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Media Query */
+@media only screen and (max-width:450px){
+  .innerDiv{
+    width:20rem;
+  }
+  .itemDiv{
+    width: 18.9rem;
+  }
+  .iconsDiv{
+    width:10rem;
+    min-height:6rem; 
+  }
 }
